@@ -98,6 +98,7 @@ de l'exercice; il suffit d'ajouter le paramètre `--ad-hoc`.
 ## Résultats
 ### Graphes de liaison
 Les fichiers de sortie des différents modèles de graphes de liaisons se trouvent dans le répertoire `dist/data/output/`.
+
 **Granular graph:**
 ```json
 {
@@ -153,10 +154,9 @@ délais de traitements. <br>
 Dans un second temps, il serait nécessaire de configurer différents éléments propres à la configuration d'exécution de Spark comme par
 exemple, les mémoires du driver et des exécuteurs e.g. `spark.executor.memory` ainsi que leur configuration de parallelisme 
 e.g. `spark.executor.cores`, `spark.executor.instances`. Sur un plan fonctionnel, il serait nécessaire d'optimiser des 
-opérations nécessitant des shuffle tels que les jointures et aggregations en équilibrant l'échange de partitions autour 
-du cluster e.g. `spark.sql.shuffle.partitions`. Finalement, Spark est optimisé pour la manipulation de fichiers `parquet`.
-Traiter des données sous ce format apporte de nombreux avantages de lecture e.g. pushdown predicate et d'écriture tels que le partitionnement
-et la compaction.
+opérations nécessitant des shuffle tels que les jointures et aggregations en équilibrant l'échange de partitions (data skewness) par le biais de clés adaptées ou même 
+de paramètre tels que e.g. `spark.sql.shuffle.partitions`. Finalement, Spark est optimisé pour la manipulation de fichiers `parquet`.
+Traiter des données sous ce format apporte de nombreux avantages de lecture e.g. pushdown predicate et d'écriture tels que le partitionnement et la compaction.
 
 
 ## SQL
