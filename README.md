@@ -4,7 +4,7 @@ Python version > v3.7
 ### Etapes
 1. Accéder au répertoire du projet
 ```
-cd path-to-project/TestLBC
+cd path-to-project/test-lbc
 ```
 2. Créer un environnement virtuel suivant `requirements.txt` et l'activer
 ```
