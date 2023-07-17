@@ -1,0 +1,7 @@
+{
+  "app_name": "Drug Graph",
+  "data_input_path": "data/input",
+  "data_output_path": "data/output",
+  "output_folder_granular": "granular_graph",
+  "output_folder_compact": "compact_graph"
+}
